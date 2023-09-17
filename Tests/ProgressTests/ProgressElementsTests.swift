@@ -100,6 +100,6 @@ class ProgressElementsTests: XCTestCase {
         let bar = ProgressBar(count: 10000, printer: ProgressBarTestPrinter())
         let timeEstimates = ProgressTimeEstimates()
         
-        XCTAssertEqual(timeEstimates.value(bar), "ETA: 00:00:00 (at 0.00) it/s)")
+        XCTAssertEqual(timeEstimates.value(bar), "ETA: 00:00:00")
     }
 }

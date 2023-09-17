@@ -50,7 +50,7 @@ class ProgressTests: XCTestCase {
         var bar = ProgressBar(count: 2, printer: testPrinter)
 
         bar.next()
-        XCTAssertEqual(testPrinter.lastValue, "0 of 2 [                              ] ETA: 00:00:00 (at 0.00) it/s)")
+        XCTAssertEqual(testPrinter.lastValue, "0 of 2 [                              ] ETA: 00:00:00")
         bar.next()
         XCTAssertTrue(testPrinter.lastValue.hasPrefix("1 of 2 [---------------               ] ETA: "))
     }
@@ -76,7 +76,7 @@ class ProgressTests: XCTestCase {
     func testProgressBarCountZero() {
         let bar = ProgressBar(count: 0)
         
-        XCTAssertEqual(bar.value, "0 of 0 [------------------------------] ETA: 00:00:00 (at 0.00) it/s)")
+        XCTAssertEqual(bar.value, "0 of 0 [------------------------------] ETA: 00:00:00")
     }
     
     func testProgressBarOutOfBounds() {

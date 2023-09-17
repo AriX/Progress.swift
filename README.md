@@ -28,7 +28,7 @@ for i in Progress(1...9) {
 Creates this output:
 
 ```
-$ 4 of 9 [-------------                 ] ETA: 0:00:05 (at 1.01 it/s)
+$ 4 of 9 [-------------                 ] ETA: 0:00:05
 ```
 
 It also works with all the other types adopting the `CollectionType` protocol like dictionarys: `Progress(["key": "value", "key2": "also value"])` and arrays: `Progress([1, 52, 6, 26, 1])`.
@@ -77,7 +77,7 @@ $ 100% [------------------------------------------------------------]
 * `ProgressBarLine` (The actual bar. E.g. "[----------------------        ]").
 * `ProgressIndex` (The current index & overall count. E.g. "2 of 3").
 * `ProgressPercent` (The progress in percent. E.g. "60%").
-* `ProgressTimeEstimates` (Estimated time remaining & items per second. E.g. "ETA: 00:00:02 (at 1.00 it/s)").
+* `ProgressTimeEstimates` (Estimated time remaining & items per second. E.g. "ETA: 00:00:02").
 * `ProgressString` (Adds an arbitrary string to the progress bar).
 
 ## Installation
